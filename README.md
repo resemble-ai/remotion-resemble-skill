@@ -7,7 +7,7 @@ An AI agent skill for creating voiceovers in Remotion videos using [Resemble.ai]
 Install with a single command:
 
 ```bash
-npx skills add yourusername/remotion-resemble-skill
+npx skills add resemble-ai/remotion-resemble-skill
 ```
 
 ## What This Skill Does
