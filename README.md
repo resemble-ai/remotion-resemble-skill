@@ -84,7 +84,6 @@ remotion-resemble-ai/
 
 - [Resemble.ai](https://resemble.ai) - AI Voice Generator
 - [Remotion](https://remotion.dev) - Make videos programmatically
-- [skills.sh](https://skills.sh) - The Agent Skills Directory
 
 ## License
 
