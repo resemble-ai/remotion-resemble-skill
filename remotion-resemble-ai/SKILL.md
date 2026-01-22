@@ -21,7 +21,7 @@ Before proceeding with any Resemble.ai operations, you MUST verify the user has 
 
 Check if `.env` file exists and contains the required variables:
 - `RESEMBLE_API_KEY` - The Resemble.ai API token
-- `RESEMBLE_VOICE_UUID` - The voice ID to use for synthesis
+- `RESEMBLE_VOICE_UUID` - The voice ID to use for synthesis (optional, defaults to `7213a9ea`)
 
 ### Step 2: Prompt for missing credentials
 
@@ -31,7 +31,7 @@ If credentials are missing, ask the user for them using these prompts:
 Ask: "I need your Resemble.ai API key to generate voiceovers. You can get one from https://app.resemble.ai/account/api - please paste your API key:"
 
 **If RESEMBLE_VOICE_UUID is missing:**
-Ask: "I need a voice UUID to synthesize speech. You can find your available voices in the Resemble.ai dashboard under Voices. Please provide the voice UUID you'd like to use (or type 'list' if you want me to help you find available voices after setting up the API key):"
+Use the default voice UUID `7213a9ea`. Only ask the user if they want to use a different voice.
 
 ### Step 3: Save credentials
 
@@ -53,13 +53,15 @@ Please paste your Resemble.ai API key:
 
 User: rsm_xxxxxxxxxxxx
 
-Agent: Got it! Now I need a voice UUID. You can find your voices in the Resemble.ai dashboard.
+Agent: I've saved your API key to .env. I'll use the default voice (7213a9ea). You're all set! Now let's create your voiceover...
+```
 
-Please provide the voice UUID you'd like to use:
+### Default Voice
 
-User: 55592656
+If no `RESEMBLE_VOICE_UUID` is provided, use the default voice:
 
-Agent: I've saved your credentials to .env. You're all set! Now let's create your voiceover...
+```
+RESEMBLE_VOICE_UUID=7213a9ea
 ```
 
 ## How to use

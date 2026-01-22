@@ -30,22 +30,16 @@ Please paste your Resemble.ai API key:
 ```
 
 **Missing Voice UUID:**
-```
-I need a voice UUID to synthesize speech.
-
-Find your voices at: https://app.resemble.ai (under Voices section)
-
-Please provide the voice UUID you'd like to use:
-```
+Use the default voice UUID `7213a9ea`. Only prompt the user if they specifically want to use a different voice.
 
 ### 3. Save credentials to .env
 
-After user provides credentials, create/update .env:
+After user provides API key, create/update .env with the default voice:
 
 ```bash
 # Create .env if it doesn't exist, append if it does
 echo "RESEMBLE_API_KEY=user_provided_key" >> .env
-echo "RESEMBLE_VOICE_UUID=user_provided_uuid" >> .env
+echo "RESEMBLE_VOICE_UUID=7213a9ea" >> .env  # Default voice
 ```
 
 ### 4. Ensure .gitignore includes .env
@@ -69,7 +63,7 @@ Create a `.env` file in your project root:
 
 ```env
 RESEMBLE_API_KEY=your_api_key_here
-RESEMBLE_VOICE_UUID=your_voice_uuid_here
+RESEMBLE_VOICE_UUID=7213a9ea  # Default voice, change if needed
 ```
 
 Add `.env` to your `.gitignore`:
